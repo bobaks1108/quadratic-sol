@@ -1,4 +1,4 @@
-#Quadratic equation solution calculator.
+h1. Quadratic equation solution calculator.
 
 This bash script calculates the solutions of a Quadratic Equation. 
 
@@ -6,14 +6,14 @@ This bash script calculates the solutions of a Quadratic Equation.
 ax^2 + bx + c = 0
 ```
 
-##Example quadratic equation solution
+h2. Example quadratic equation solution
 
 An example quadratic equation is 5x^2 + 6x + 1 = 0
 
 For this: x = −0.2 or x = −1
 
 
-##To run the program:
+h2. To run the program:
 
 ```
 . quadratic_sol.sh [arguments]
