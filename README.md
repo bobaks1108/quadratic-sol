@@ -7,14 +7,12 @@ This bash script calculates the solutions of a Quadratic Equation.
 ax^2 + bx + c = 0
 ```
 
-##Example quadratic equation solution
-
 An example quadratic equation is 5x^2 + 6x + 1 = 0
 
-For this: x = −0.2 or x = −1
+For this the solution is: x = −0.2 or x = −1
 
 
-##To run the program:
+To run the program:
 
 ```
 . quadratic_sol.sh [arguments]
@@ -23,7 +21,7 @@ For this: x = −0.2 or x = −1
 You must supply 3 arguments for a,b and c.
 
 * the value of a cannot be 0
-* all values must be whole numbers (eg. 
+* all values must be integers (i.e. whole numbers - negative of postitive)
 
 ```
 . quadratic_sol.sh 5 6 1
