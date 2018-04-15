@@ -1,4 +1,5 @@
-#Quadratic equation solution calculator.
+Quadratic equation solution calculator.
+======================================
 
 This bash script calculates the solutions of a Quadratic Equation. 
 
