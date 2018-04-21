@@ -1,22 +1,22 @@
 #!/bin/bash
+# Script to calculate the solutions to Quadratic Equations
+# by Bob Guinn
 
-# Print out some title text to the screen
 echo "Quadratic equation solution calculator"
 echo "  ax^2 + bx + c = 0"
 echo
 
-# Check if the user has entered -h as the first argument, if so print out the help text only.
 if [ "$1" == "-h" ] ; then
   display_help
 else
 
-  # Check if the user entered less than 3 arguments, if so just display and error and the help.
+  # Check if the user entered less than 3 arguments, if so just display 
+  # and error and the help, if not calculate the solutions.
   if [ "$#" -lt 3 ] ; then
     echo "You must to supply 3 values."
     display_help
   else
 
-    # There are 3 arguments so print them out to the screen first.
     echo "Values supplied:"
 
     echo "a = $1"
@@ -48,7 +48,6 @@ else
   fi
 fi
 
-# Print some useful links out to the screen
 echo "See: http://www.bbc.co.uk/schools/gcsebitesize/maths/algebra/quadequationshirev3.shtml"
 echo "     https://www.mathsisfun.com/quadratic-equation-solver.html"
 
