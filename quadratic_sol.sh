@@ -11,7 +11,7 @@ if [ "$1" == "-h" ] ; then
 else
 
   # Check if the user entered less than 3 arguments, if so just display 
-  # and error and the help, if not calculate the solutions.
+  # an error and the help, if not calculate the solutions.
   if [ "$#" -lt 3 ] ; then
     echo "You must to supply 3 values."
     display_help
