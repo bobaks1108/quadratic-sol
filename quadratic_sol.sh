@@ -58,5 +58,5 @@ display_help() {
     echo "  You must supply 3 arguments for a,b and c"
     echo "  of the quadratic equation."
     echo
-}nd 
+}
 
