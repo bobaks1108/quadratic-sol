@@ -6,7 +6,15 @@ echo "Quadratic equation solution calculator"
 echo "  ax^2 + bx + c = 0"
 echo
 
-if [ "$1" == "-h" ] ; then
+display_help() {
+    echo -e "Usage: . quadratic_sol.sh [arguments]" >&2
+    echo
+    echo "  You must supply 3 arguments for a,b and c"
+    echo "  of the quadratic equation."
+    echo
+}
+
+if [ "$1" == "-h" ] || [ "$1" == "--help" ] ; then
   display_help
 else
 
@@ -50,12 +58,3 @@ fi
 
 echo "See: http://www.bbc.co.uk/schools/gcsebitesize/maths/algebra/quadequationshirev3.shtml"
 echo "     https://www.mathsisfun.com/quadratic-equation-solver.html"
-
-display_help() {
-    echo -e "Usage: . quadratic_sol.sh [arguments]" >&2
-    echo
-    echo "  You must supply 3 arguments for a,b and c"
-    echo "  of the quadratic equation."
-    echo
-}
-
