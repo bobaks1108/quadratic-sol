@@ -14,8 +14,17 @@ For this the solution is: x = −0.2 or x = −1
 
 To run the program:
 
+Ensure you have permission to run the quadratic_sol.sh script.
+
+Change to the directory containing the script and set the permission to executable for the owner of the file (presuming you are the owner of the file).
 ```
-. quadratic_sol.sh [arguments]
+chmod u=rwx quadratic_sol.sh
+```
+
+Run the script:
+
+```
+./quadratic_sol.sh [arguments]
 ```
 
 You must supply 3 arguments for a,b and c.
