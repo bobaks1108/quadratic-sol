@@ -33,7 +33,7 @@ You must supply 3 arguments for a,b and c.
 * all values must be integers (i.e. whole numbers - negative of postitive)
 
 ```
-. quadratic_sol.sh 5 6 1
+./quadratic_sol.sh 5 6 1
 ```
 
 For more information about Quadratic Equation please see:
