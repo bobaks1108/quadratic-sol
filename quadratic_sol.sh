@@ -1,6 +1,6 @@
 #!/bin/bash
 # Script to calculate the solutions to a Quadratic Equation
-# by Bob Guinn
+# by Bob Guinn.
 
 echo "Quadratic equation solution calculator"
 echo "  ax^2 + bx + c = 0"
