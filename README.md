@@ -1,7 +1,7 @@
 Quadratic equation solution calculator.
 ======================================
 
-This bash script calculates the solutions of a Quadratic Equation using parameters passed in as arguments. A quadratic equation is an algbraic equation in the format of:  
+This bash script calculates the solutions of a Quadratic Equation using parameters passed in as arguments (a,b, and c). A quadratic equation is an algbraic equation in the format of:  
 
 ```
 ax^2 + bx + c = 0
