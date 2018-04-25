@@ -20,6 +20,7 @@ display_help() {
     echo "or on CentOS / RHEL / Fedora using:"
     echo "yum install bc" 
     echo
+}
 
 if [ "$1" == "-h" ] || [ "$1" == "--help" ] ; then
   display_help
