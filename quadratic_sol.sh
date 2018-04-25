@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script to calculate the solutions to Quadratic Equations
+# Script to calculate the solutions to a Quadratic Equation
 # by Bob Guinn
 
 echo "Quadratic equation solution calculator"
@@ -7,12 +7,19 @@ echo "  ax^2 + bx + c = 0"
 echo
 
 display_help() {
-    echo -e "Usage: . quadratic_sol.sh [arguments]" >&2
+    echo -e "Usage: ./quadratic_sol.sh [arguments]" >&2
     echo
-    echo "  You must supply 3 arguments for a,b and c"
+    echo "  You must supply 3 arguments for a, b and c"
     echo "  of the quadratic equation."
     echo
-}
+    echo "The script requires you to have bc command installed"
+    echo "on your system, if the bc command not found you can"
+    echo "easily install it by:"
+    echo "on Ubuntu / Debian machine using:" 
+    echo "apt-get install bc"
+    echo "or on CentOS / RHEL / Fedora using:"
+    echo "yum install bc" 
+    echo
 
 if [ "$1" == "-h" ] || [ "$1" == "--help" ] ; then
   display_help
