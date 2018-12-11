@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script to calculate the solutions to a Quadratic Equation
+# Bash script to calculate the solutions to a Quadratic Equation
 # by Bob Guinn.
 
 echo "Quadratic equation solution calculator"
@@ -26,43 +26,72 @@ if [ "$1" == "-h" ] || [ "$1" == "--help" ] ; then
   display_help
 else
 
-  # Check if the user entered less than 3 arguments, if so just display 
-  # an error and the help, if not calculate the solutions.
+  # Check if the user entered less than 3 arguments, if so ask for them to be entered.
   if [ "$#" -lt 3 ] ; then
-    echo "You must to supply 3 values."
-    display_help
+
+    echo "You must to supply 3 values, please:"
+    echo "enter a value for a:"
+    read a
+    echo "enter a value for b:"
+    read b
+    echo "enter a value for b:"
+    read c
+
   else
 
-    echo "Values supplied:"
+    a=$1
+    b=$2
+    c=$3
 
-    echo "a = $1"
-    echo "b = $2"
-    echo "c = $3"
+  fi
+
+  re='^[+-]?[0-9]+([.][0-9]+)?$'
+  if ! [[ $a =~ $re ]]  ; then
+    echo "error:  a is not a number." >&2; exit 1
+  fi
+
+  if ! [[ $b =~ $re ]]  ; then
+    echo "error:  b is not a number." >&2; exit 1
+  fi
+
+  if ! [[ $c =~ $re ]]  ; then
+    echo "error:  c is not a number." >&2; exit 1
+  fi
+    
+  if [[ $a=0 ]]; then
+    echo "error: a cannot be 0" >&2; exit 1
+  fi
+
+  echo "Values supplied:"
+
+  echo "a = $a"
+  echo "b = $b"
+  echo "c = $c"
+  echo
+
+  # Firstly check if the values entered are valid i.e.
+  # check if quadratic equation has real solutions, which can be checked
+  # by calculating the equation's discriminant.
+  # If this is negative then this will mean the formuala does not
+  # have any real solutions because it has to calculate the 
+  # square root of a negative number.
+    
+  checkit=$(echo "$b*$b - 4*$a*$c" | bc -l)
+  if [ $checkit -lt 0 ] ; then
+    echo "Values supplied are invalid."
+  else
+    
+    # if there are real solutions for the vaules entered calculate
+    # them using the quadratic formula and print them out.
+    resa=$(echo "(($b*-1) + sqrt(($b*$b) - (4*$a*$c))) / (2*$a)" | bc -l)
+    resb=$(echo "(($b*-1) - sqrt(($b*$b) - (4*$a*$c))) / (2*$a)" | bc -l)
+    echo "Roots:"
+    printf "%0.2f\n" $resb
+    printf "%0.2f\n" $resa
     echo
-
-    # Firstly check if the values entered are valid i.e.
-    # check if quadratic equation has real solutions, which can be checked
-    # by calculating the equation's discriminant.
-    # If this is negative then this will mean the formuala does not
-    # have any real solutions because it has to calculate the 
-    # square root of a negative number.
-    
-    checkit=$(echo "$2*$2 - 4*$1*$3" | bc -l)
-    if [ $checkit -lt 0 ] ; then
-      echo "Values supplied are invalid."
-    else
-    
-      # if there are real solutions for the vaules entered calculate
-      # them using the quadratic formula and print them out.
-      resa=$(echo "(($2*-1) + sqrt(($2*$2) - (4*$1*$3))) / (2*$1)" | bc -l)
-      resb=$(echo "(($2*-1) - sqrt(($2*$2) - (4*$1*$3))) / (2*$1)" | bc -l)
-      echo "Roots:"
-      printf "%0.2f\n" $resb
-      printf "%0.2f\n" $resa
-      echo
-    fi
   fi
 fi
+
 
 echo "See: http://www.bbc.co.uk/schools/gcsebitesize/maths/algebra/quadequationshirev3.shtml"
 echo "     https://www.mathsisfun.com/quadratic-equation-solver.html"
