@@ -25,7 +25,7 @@ chmod u=rwx quadratic_sol.sh
 Run the script using:
 
 ```
-./quadratic_sol.sh [arguments]
+./quadratic_sol.sh <a> <b> <c>
 ```
 
 You must supply 3 arguments for a, b and c.
