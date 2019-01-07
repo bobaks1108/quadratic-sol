@@ -28,9 +28,9 @@ Run the script using:
 ./quadratic_sol.sh [arguments]
 ```
 
-You must supply 3 arguments for a,b and c.
+You must supply 3 arguments for a, b and c.
 
-* all values must be integers (i.e. whole numbers - negative of postitive)
+* all values must be numbers (negative of postitive, decimals are allowed)
 * the value of 'a' cannot be 0
 
 E.G.
